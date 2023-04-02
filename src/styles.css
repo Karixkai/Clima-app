@@ -1,0 +1,38 @@
+body {
+    margin-top: 100px;
+    margin-left: 300px;
+    margin-right: 300px;
+    margin-bottom: 100px;
+    padding-top: 10px;
+    text-align: center;
+    border-radius: 30px;
+    border: 1px solid #a28c98;
+    font-size: 29px;
+  }
+  .emoji {
+    font-size: 90px;
+  }
+  .form-control.rounded {
+    margin-top: 20px;
+    width: 50%;
+  }
+  #cel,
+  #far {
+    color: #5ba0ca;
+    cursor: pointer;
+    text-shadow: #a28c98;
+  }
+  .caracteristics {
+    margin-top: 10px;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  li {
+    display: inline-block;
+    margin-top: 50px;
+    padding-right: 100px;
+    margin-bottom: 10px;
+  }
+  

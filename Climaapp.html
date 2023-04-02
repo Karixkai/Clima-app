@@ -1,0 +1,77 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/styles.css" />
+    <title>Karen Weather <applet></applet></title>
+  </head>
+  <body>
+    <div class="input-group">
+      <input
+        type="search"
+        class="form-control rounded"
+        placeholder="What is your city?"
+        aria-label="Search"
+        aria-describedby="search-addon"
+        id="cityname"
+      />
+      <button type="button" class="btn btn-outline-primary" id="button1">
+        Search
+      </button>
+      <button type="button" class="btn btn-outline-success" id="button2">
+        Current
+      </button>
+    </div>
+    <h1 id="city">Dublin</h1>
+    <h3><span id="weekday">Thursday 12:42 </span></h3>
+    <div class="emoji">☀️</div>
+    <h2>
+      <span id="grade">19</span> <span id="cel">°C</span> |
+      <span id="far">°F</span>
+    </h2>
+
+    <div class="caracteristics">
+      Humidity:<span id="humidity"></span> Wind:<span id="wind"></span> km/h
+    </div>
+    <ul>
+      <li>
+        🌧️
+        <br />
+        Monday
+        <br />
+        12Cº
+      </li>
+      <li>
+        ☀️
+        <br />
+        Tuesday
+        <br />
+        23Cº
+      </li>
+      <li>
+        ☀️
+        <br />
+        Wednesday
+        <br />
+        15Cº
+      </li>
+      <li>
+        ⛈️
+        <br />
+        Thurday
+        <br />
+        17Cº
+      </li>
+      <li>
+        ⛈️
+        <br />
+        Friday
+        <br />
+        18Cº
+      </li>
+    </ul>
+  </body>
+  <script src="src/index.js"></script>
+</html>
