@@ -18,15 +18,23 @@ let currentime = `${day} ${currentHours}:${currentminutes}`;
 weekday.innerHTML = currentime;
 
 function displayWeatherCondition(response) {
+   let descriptionElement = document.querySelector("#description");
+  descriptionElement.innerHTML = response.data.weather[0].description;
+  let c = Math.round(response.data.main.temp);
+  let f = (c * 9) / 5 + 32;
   document.querySelector("#city").innerHTML = response.data.name;
-  document.querySelector("#grade").innerHTML = Math.round(
-    response.data.main.temp
-  );
   console.log(response);
+  const celcius2 = celcius.bind(null,c);
+  const faren2 = faren.bind(null,f);
+  let farlink = document.querySelector("#far");
+farlink.addEventListener("click", faren2);
+let cellink = document.querySelector("#cel");
+cellink.addEventListener("click", celcius2);
+
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
-  document.querySelector("#wind").innerHTML = Math.round(
-    response.data.wind.speed
-  );
+  document.querySelector("#wind").innerHTML = Math.round(response.data.wind.speed);
+  document.querySelector("#emoji").src = `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`;
+celcius2(c);
 }
 
 function searchCity(city) {
@@ -57,16 +65,13 @@ function getCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(searchlocation);
 }
 
-function celcius(event) {
-  event.preventDefault();
-  let grade = document.querySelector("#grade");
-  grade.innerHTML = "40";
+function celcius(c="40") {
+  document.querySelector("#grade").innerHTML = c;
+
 }
 
-function faren(event) {
-  event.preventDefault();
-  let grade2 = document.querySelector("#grade");
-  grade2.innerHTML = "104";
+function faren(f="104") {
+  document.querySelector("#grade").innerHTML = f;
 }
 
 let farlink = document.querySelector("#far");
