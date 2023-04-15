@@ -9,8 +9,8 @@ body {
     border: 1px solid #a28c98;
     font-size: 29px;
   }
-  .emoji {
-    font-size: 90px;
+  #emoji {
+    margin:auto;
   }
   .form-control.rounded {
     margin-top: 20px;
@@ -31,8 +31,10 @@ body {
   }
   li {
     display: inline-block;
-    margin-top: 50px;
-    padding-right: 100px;
-    margin-bottom: 10px;
+    margin-top: 60px;
+    padding-right: 90px;
+    margin-bottom: 60px;
+    
   }
+  
   
